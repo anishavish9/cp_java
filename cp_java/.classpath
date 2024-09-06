@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mysql.driver">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Day12"/>
+	<classpathentry kind="src" path="Day13"/>
+	<classpathentry kind="src" path="Day14"/>
+	<classpathentry kind="src" path="Day16"/>
+	<classpathentry kind="src" path="Day15"/>
+	<classpathentry kind="src" path="Day11"/>
+	<classpathentry kind="src" path="Day1"/>
+	<classpathentry kind="src" path="Day3"/>
+	<classpathentry kind="src" path="Day10"/>
+	<classpathentry kind="src" path="Day2"/>
+	<classpathentry kind="src" path="Day5"/>
+	<classpathentry kind="src" path="Day4"/>
+	<classpathentry kind="src" path="Day7"/>
+	<classpathentry kind="src" path="Day6"/>
+	<classpathentry kind="src" path="Day9"/>
+	<classpathentry kind="src" path="Day8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

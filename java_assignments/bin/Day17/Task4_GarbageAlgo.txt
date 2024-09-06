@@ -1,0 +1,86 @@
+Task 4: Research and present a comparison of different garbage collection 
+algorithms (Serial, Parallel, CMS, G1, ZGC) in Java.
+
+
+Serial GC:
+***********
+Uses a single thread for garbage collection, making it simple and effective for small applications.
+Use Case: Best suited for single-threaded applications or small applications where low overhead is critical.
+Pause Time: High, since it stops all application threads during GC.
+Throughput: Low due to single-threaded nature.
+Memory Footprint: Low, as it uses minimal resources.
+Pros: Simple implementation, low resource usage.
+Cons: Not suitable for large applications due to long pause times.
+
+----------------------------------
+
+Parallel GC:
+*************
+Leverages multiple threads to perform GC, enhancing throughput.
+Use Case: Multi-threaded applications where throughput is more critical than latency.
+Pause Time: Medium, with stop-the-world pauses, but shorter than Serial GC.
+Throughput: High, suitable for throughput-sensitive applications.
+Memory Footprint: Medium to high, depending on the number of threads used.
+Pros: Improved throughput, better than Serial GC for larger heaps.
+Cons: Pause times can still be significant, not ideal for latency-sensitive applications.
+
+
+-------------------------------------
+
+CMS (Concurrent Mark-Sweep):
+****************************
+Performs most of the garbage collection work concurrently with application threads to minimize pause times.
+Use Case: Applications requiring low-latency, like web servers or interactive applications.
+Pause Time: Low, with concurrent phases reducing stop-the-world pauses.
+Throughput: Medium, with some overhead due to concurrent operations.
+Memory Footprint: Medium to high, due to additional data structures for concurrent processing.
+Pros: Low pause times, good for interactive and latency-sensitive applications.
+Cons: Higher CPU usage, potential fragmentation, deprecated in JDK 9, removed in JDK 14.
+
+------------------------------------------
+
+G1 GC:
+*******
+A regionalized garbage collector that divides the heap into regions and performs incremental compaction.
+Use Case: Large applications needing predictable pause times, suitable for both latency and throughput requirements.
+Pause Time: Low to medium, with most work done concurrently, but may include stop-the-world phases.
+Throughput: High, balancing between latency and throughput.
+Memory Footprint: Medium to high, with regional management overhead.
+Pros: Predictable pause times, good for balancing throughput and latency.
+Cons: More complex tuning, may not be as efficient as specialized collectors for specific workloads.
+
+---------------------------------------------
+
+
+ZGC:
+*****
+A garbage collector designed for ultra-low pause times, suitable for very large heaps.
+Use Case: Large-scale applications requiring minimal pause times, such as high-frequency trading systems and large data processing applications.
+Pause Time: Very low, typically less than 10ms.
+Throughput: Medium to high, with minimal impact on application performance.
+Memory Footprint: Medium, with some overhead for low-latency operations.
+Pros: Extremely low pause times, ideal for very large heaps.
+Cons: Higher CPU and memory overhead, relatively new and less mature compared to other collectors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
